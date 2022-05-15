@@ -44,8 +44,10 @@ function startGame() {
   // Reset scores and game counter
   player1Score = 0;
   document.getElementById("p1Score").innerHTML = player1Score;
+  document.getElementById("playerScore1").style.backgroundColor = "lightgreen";
   player2Score = 0;
   document.getElementById("p2Score").innerHTML = player2Score;
+  document.getElementById("playerScore2").style.backgroundColor = "lightgray";
   turnCounter = 1;
   // reset onclick for cards, random card backs and remove card styles
   // count over 3 rows
@@ -92,20 +94,15 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-function winnerTimer() {
-  // timer function for checkWinner
-  var x = setTimeout(checkWinner, 2000);
-}
-
 function checkWinner() {
   // displays the winner of the game
-  if (turnCounter == 13 && player1Score > player2Score) {
+  if (player1Score > player2Score) {
     alert("Player 1 Wins " + player1Score + " to " + player2Score + ". Press start to try again.");
   }
-  if (turnCounter == 13 && player2Score > player1Score) {
+  if (player2Score > player1Score) {
     alert("Player 2 Wins " + player2Score + " to " + player1Score  + ". Press start to try again.");
   }
-  if (turnCounter == 13 && player2Score == player1Score) {
+  if (player2Score == player1Score) {
     alert("We have a tie. Press start to try again.");
   }
 }
@@ -138,5 +135,7 @@ function countCard(cardId) {
   }
   // update player score
   updateScore(cardValue);
-  winnerTimer();
+  if (turnCounter == 13) {
+      checkWinner();
+  }
 }
