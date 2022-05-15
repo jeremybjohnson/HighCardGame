@@ -71,11 +71,15 @@ function updateScore(cardValue) {
   if (turnCounter % 2 != 0) {
     player1Score += cardValue;
     document.getElementById("p1Score").innerHTML = player1Score;
+    document.getElementById("playerScore2").style.backgroundColor = "lightgreen";
+    document.getElementById("playerScore1").style.backgroundColor = "lightgray";
   }
   // else player 2 turn - even turnCounter
   else {
     player2Score += cardValue;
     document.getElementById("p2Score").innerHTML = player2Score;
+    document.getElementById("playerScore1").style.backgroundColor = "lightgreen";
+    document.getElementById("playerScore2").style.backgroundColor = "lightgray";
   }
   // increment turn counter to swap players
   turnCounter++;
