@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+html {
+  background-color: SlateGray;
+}
+
+body {
+  background-color: LightSteelBlue;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 55%;
+  margin: 20px auto 20px auto;
+  border-left: 5px solid rgb(71, 71, 71);
+  border-right: 5px solid rgb(71, 71, 71);
+  box-shadow: rgb(51, 51, 51) 20px 0px 25px,
+              rgb(51, 51, 51) -20px 0px 25px;
+}
+
+#playerScore1 {
+  border: 10px solid IndianRed;
+  margin: 10px 0px 5px 30px;
+  border-radius: 10px;
+  background-color: lightgray;
+  height: 130px;
+  text-align: center;
+}
+
+#playerScore2 {
+  border: 10px solid SteelBlue;
+  margin: 10px 30px 5px 0px;
+  border-radius: 10px;
+  background-color: lightgray;
+  height: 130px;
+  text-align: center;
+}
+
+#p1Score {
+  color: IndianRed;
+  font-size: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#p2Score {
+  color: SteelBlue;
+  font-size: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#player1, #player2  {
+  style="font-size: 28px;
+  margin-bottom:5px;
+  margin-top: 30px;
+  color: SlateGray;
+  text-align: center;
+}
+
+#player1 {
+  margin-left: 40px;
+}
+
+#player2 {
+  margin-right: 35px;
+}
+
+.cards {
+  width: 90px;
+  box-shadow:10px -10px 25px DimGray;
+}
+
+.cardsRow {
+  margin: 20px 20px 20px 20px;
+}
+
+button {
+  background-color: LightSteelBlue;
+}
+
+#start {
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin: 10px 0px 30px 40px;
+  width: 150px;
+  font-size: 40px;
+  border-radius: 10px;
+  box-shadow:20px -5px 25px DimGray;
+  background-image: linear-gradient(to bottom right, LightSteelBlue, SteelBlue);
+}
