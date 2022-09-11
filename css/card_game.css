@@ -8,7 +8,7 @@ body {
   background-color: LightSteelBlue;
   border: 1px solid black;
   border-radius: 15px;
-  width: 55%;
+  width: 90%;
   margin: 20px auto 20px auto;
   border-left: 5px solid rgb(71, 71, 71);
   border-right: 5px solid rgb(71, 71, 71);
@@ -18,7 +18,7 @@ body {
 
 #playerScore1 {
   border: 10px solid IndianRed;
-  margin: 10px 0px 5px 30px;
+  margin: 10px 0px 5px 10px;
   border-radius: 10px;
   background-color: lightgreen;
   height: 130px;
@@ -27,7 +27,7 @@ body {
 
 #playerScore2 {
   border: 10px solid SteelBlue;
-  margin: 10px 30px 5px 0px;
+  margin: 10px 10px 5px 0px;
   border-radius: 10px;
   background-color: lightgray;
   height: 130px;
@@ -56,21 +56,14 @@ body {
   text-align: center;
 }
 
-#player1 {
-  margin-left: 40px;
-}
-
-#player2 {
-  margin-right: 35px;
-}
-
-.cards {
-  width: 90px;
+.cards, .cards2 {
+  /*width: 70%;*/
+  /*object-fit: fill;*/
   box-shadow:10px -10px 25px DimGray;
 }
 
 .cardsRow {
-  margin: 20px 20px 20px 20px;
+  margin: 20px;
 }
 
 button {
@@ -78,12 +71,48 @@ button {
 }
 
 #start {
-  margin-bottom: 30px;
-  margin-left: 30px;
   margin: 10px 0px 30px 40px;
   width: 150px;
   font-size: 40px;
   border-radius: 10px;
   box-shadow:20px -5px 25px DimGray;
   background-image: linear-gradient(to bottom right, LightSteelBlue, SteelBlue);
+}
+
+
+/*@media only screen and (min-width: 560px) and (max-width: 770px) {*/
+/*  .cards {*/
+/*    max-width: 100%;*/
+/*  }*/
+/*}*/
+
+/*@media only screen and (min-width: 500px) and (max-width: 560px) {*/
+/*  .cards {*/
+/*    max-width: 120%;*/
+/*  }*/
+/*}*/
+
+/*@media only screen and (min-width: 450px) and (max-width: 500px) {*/
+/*  .cards {*/
+/*    max-width: 150%;*/
+/*  }*/
+/*}*/
+
+/*@media only screen and (min-width: 400px) and (max-width: 450px) {*/
+/*  .cards {*/
+/*    max-width: 200%;*/
+/*  }*/
+/*}*/
+
+@media only screen and (max-width: 500px) {
+  #start {
+    width: 100px;
+    font-size: 30px;
+  }
+  #p1Score, #p2Score {
+    font-size: 40px;
+  }
+  #playerScore1, #playerScore2 {
+    height: 80px;
+  }
 }
